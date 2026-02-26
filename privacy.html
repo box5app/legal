@@ -78,29 +78,6 @@
             color: #374151;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-        }
-
-        th,
-        td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #E5E7EB;
-        }
-
-        th {
-            background-color: #F3F4F6;
-            font-weight: 600;
-            color: #1F2937;
-        }
-
-        td {
-            color: #374151;
-        }
-
         a {
             color: #6366F1;
             text-decoration: none;
@@ -138,8 +115,8 @@
             <div class="logo">Box 5</div>
             <h1>Privacy Policy</h1>
             <div class="dates">
-                <p>Effective: February 11, 2026</p>
-                <p>Last Updated: February 11, 2026</p>
+                <p>Effective: February 24, 2026</p>
+                <p>Last Updated: February 24, 2026</p>
             </div>
         </header>
 
@@ -155,53 +132,100 @@
                 images).</p>
             <p><strong>User-Generated Content:</strong> We store the content you create within the App, including
                 flashcard decks and cards (text and images), study progress and statistics, and learning history.</p>
+            <p><strong>AI Feature Content:</strong> When you use the AI Card Generation feature, the content you
+                provide — such as text you type, audio recordings, images, or PDF files — is transmitted to our secure
+                API for processing. This content is used solely to generate flashcards and is not retained on our
+                servers after processing is complete.</p>
             <p><strong>Automatically Collected Information:</strong> We use PostHog to automatically collect anonymized
                 usage data, including device type and operating system version, app usage statistics, feature
                 interactions, and performance data to help us improve the App.</p>
+            <p><strong>Purchase and Subscription Data:</strong> When you subscribe to Box 5 Pro, subscription and
+                entitlement status is managed by RevenueCat. We receive anonymized purchase data to verify your
+                subscription status. We do not store your payment information.</p>
 
             <h2>How We Use Your Information</h2>
             <p>We use the collected information to provide and maintain the App, store your flashcards and study
                 progress locally on your device, track your learning progress using the Leitner spaced repetition
-                system, improve and optimize the App, and respond to your support requests.</p>
+                system, process AI card generation requests, manage your subscription status, improve and optimize the
+                App, and respond to your support requests.</p>
 
             <h2>Data Storage</h2>
             <p><strong>Local Storage:</strong> All your flashcard data is stored locally on your device using SQLite
                 database. This includes your flashcards, decks, study progress, statistics, and learning history. Your
-                personal study data never leaves your device unless you explicitly export it.</p>
-            <p><strong>No Cloud Storage:</strong> Box 5 does not require an account and does not store your flashcard
-                data on remote servers. All your study-related data remains on your device, giving you complete privacy
-                and control.</p>
+                personal study data never leaves your device unless you explicitly export it or use AI features.</p>
+            <p><strong>Temporary Cloud Processing:</strong> When you use the AI Card Generation feature, files you
+                upload (audio, images, PDFs) are temporarily stored in Amazon Web Services (AWS) S3 and automatically
+                deleted after processing is complete (typically within minutes). Text input is transmitted directly to
+                our API and is not stored.</p>
+            <p><strong>No Persistent Cloud Storage:</strong> Box 5 does not require an account and does not
+                persistently store your flashcard data on remote servers. All your study-related data remains on your
+                device.</p>
             <p><strong>Analytics Data:</strong> Anonymized usage statistics are processed by PostHog to help us
                 understand how the App is used and to improve its performance.</p>
+
+            <h2>AI Features and Data Processing</h2>
+            <p>Box 5 Pro includes an AI Card Generation feature that creates flashcards from content you provide. Here
+                is how your data is handled:</p>
+            <ul>
+                <li><strong>Text</strong> input is sent to OpenAI's API to generate flashcard content. Text is not
+                    stored after the request is complete.</li>
+                <li><strong>Audio recordings</strong> are uploaded to AWS S3, transcribed by Deepgram's API, and the
+                    resulting transcript is sent to OpenAI to generate flashcards. The audio file is deleted from AWS S3
+                    after processing.</li>
+                <li><strong>Images</strong> are temporarily stored in AWS S3 and sent to OpenAI's vision API for
+                    analysis and flashcard generation, then deleted.</li>
+                <li><strong>PDF documents</strong> are temporarily stored in AWS S3, processed to extract text, and
+                    that text is sent to OpenAI to generate flashcards, then deleted.</li>
+            </ul>
+            <p>Do not submit content that is confidential, sensitive, or that you are not permitted to share with
+                third-party AI services.</p>
+
+            <h2>Purchases and Subscriptions</h2>
+            <p>Box 5 Pro is available as a weekly, monthly, or yearly subscription. Purchases are processed by the
+                Apple App Store or Google Play Store.</p>
+            <p>We use RevenueCat to manage subscription and entitlement status. RevenueCat receives anonymized purchase
+                data to verify your subscription. See RevenueCat's Privacy Policy at <a
+                    href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+            <p>We do not store your payment card or billing details. All payment processing is handled by Apple or
+                Google.</p>
 
             <h2>Third-Party Services</h2>
             <p>We use the following third-party services:</p>
             <ul>
-                <li>Expo for app development platform (see Expo Privacy Policy at <a
-                        href="https://expo.dev/privacy">expo.dev/privacy</a>)</li>
-                <li>PostHog for product analytics and application monitoring (see PostHog Privacy Policy at <a
+                <li>Expo — app development platform (<a href="https://expo.dev/privacy">expo.dev/privacy</a>)</li>
+                <li>PostHog — product analytics and application monitoring (<a
                         href="https://posthog.com/privacy">posthog.com/privacy</a>)</li>
+                <li>OpenAI — AI-powered flashcard generation from text and images (<a
+                        href="https://openai.com/privacy">openai.com/privacy</a>)</li>
+                <li>Deepgram — audio transcription for AI card generation (<a
+                        href="https://deepgram.com/privacy">deepgram.com/privacy</a>)</li>
+                <li>RevenueCat — subscription and in-app purchase management (<a
+                        href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>)</li>
+                <li>Amazon Web Services (AWS) — secure API backend and temporary file storage (<a
+                        href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>)</li>
             </ul>
 
             <h2>Data Sharing</h2>
             <p>We do not sell, trade, or rent your personal information to third parties. Your flashcard data is stored
-                locally on your device and is not shared. We share anonymized usage analytics with PostHog, our
-                analytics provider, to help us maintain and improve the App.</p>
+                locally on your device and is not shared. Content you submit for AI processing is sent only to the
+                necessary third-party AI providers (OpenAI, Deepgram) to fulfil your request. We share anonymized usage
+                analytics with PostHog to help us maintain and improve the App.</p>
 
             <h2>Data Retention</h2>
-            <p>We retain your data for as long as your account is active. You can request deletion of your account and
-                associated data at any time through the App settings. Upon account deletion, your authentication data
-                will be removed from our servers. Local data on your device will remain until you uninstall the App.</p>
+            <p>All your flashcard data is stored locally on your device and remains there until you delete the app or
+                clear app data. Content submitted for AI processing is deleted from our servers and AWS S3 immediately
+                after processing is complete. We do not retain AI-processed content beyond what is needed to fulfil the
+                request. Anonymized analytics data is retained by PostHog per their data retention policies.</p>
 
             <h2>Your Rights</h2>
             <p>You have the right to:</p>
             <ul>
-                <li>Access your personal data</li>
-                <li>Correct inaccurate data</li>
-                <li>Delete your account and data</li>
-                <li>Export your flashcard data</li>
-                <li>Withdraw consent for data processing</li>
+                <li>Access your personal data (all stored locally on your device)</li>
+                <li>Export your flashcard data through the app's export feature</li>
+                <li>Delete your data by clearing app data or uninstalling the app</li>
             </ul>
+            <p>For questions about your data, contact us at <a
+                    href="mailto:boxfiveapp@gmail.com">boxfiveapp@gmail.com</a>.</p>
 
             <h2>Children's Privacy</h2>
             <p>Box 5 is not intended for children under 13 years of age. We do not knowingly collect personal
@@ -211,15 +235,17 @@
             <h2>Security</h2>
             <p>We implement appropriate security measures to protect your information, including:</p>
             <ul>
-                <li>Encrypted data transmission (HTTPS/TLS)</li>
-                <li>Secure authentication through OAuth 2.0</li>
+                <li>Local data storage with device-level encryption</li>
+                <li>Encrypted data transmission (HTTPS/TLS) for all API communications</li>
                 <li>Regular security updates</li>
+                <li>Temporary-only cloud storage for AI processing</li>
             </ul>
-            <p>However, no method of transmission over the internet is 100% secure.</p>
+            <p>Since your flashcard data is stored locally on your device, it benefits from your device's built-in
+                security features.</p>
 
             <h2>Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
-                Privacy Policy in the App and updating the "Last Updated" date. Your continued use of the App after
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the
+                new Privacy Policy in the App and updating the "Last Updated" date. Your continued use of the App after
                 changes constitutes acceptance of the updated policy.</p>
 
             <div class="contact">
@@ -230,7 +256,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2025 Box 5. All rights reserved.</p>
+            <p>&copy; 2026 Box 5. All rights reserved.</p>
             <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
         </footer>
     </div>
